@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.iessanalberto.dam2.proyectodi2"
+    namespace = "com.iessanalberto.dam2.proyectodi"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.iessanalberto.dam2.proyectodi2"
+        applicationId = "com.iessanalberto.dam2.proyectodi"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
@@ -30,8 +30,10 @@ android {
         }
     }
     compileOptions {
+
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -59,6 +61,15 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    //AMPLIFY
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    implementation("com.amplifyframework:core:2.14.9")
+    implementation("com.amplifyframework:aws-auth-cognito:2.14.9")
+    //Tests
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
