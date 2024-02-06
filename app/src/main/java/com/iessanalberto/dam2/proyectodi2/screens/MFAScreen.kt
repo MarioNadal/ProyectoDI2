@@ -159,20 +159,12 @@ fun MFABodyContent(
         OutlinedTextField(
             value = mfaUiState.mfaCodigo, onValueChange = { mfaScreenViewModel.onChanged(it) },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Código")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Code")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Code")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Code")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "代码")
+                when (selectedLanguage){
+                    "Español" -> Text(text = "Código")
+                    "English" -> Text(text = "Code")
+                    "Français" -> Text(text = "Code")
+                    "Deutsch" -> Text(text = "Code")
+                    "中国人" -> Text(text = "代码")
                 }
             },
             keyboardOptions = KeyboardOptions.Default.copy(
@@ -207,20 +199,12 @@ fun MFABodyContent(
             }
         })
         {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Verificar")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "Verify")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Vérifier")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Verifizieren")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "核实")
+            when (selectedLanguage){
+                "Español" -> Text(text = "Verificar")
+                "English" -> Text(text = "Verify")
+                "Français" -> Text(text = "Vérifier")
+                "Deutsch" -> Text(text = "Verifizieren")
+                "中国人" -> Text(text = "核实")
             }
         }
         //Si el código es el correcto

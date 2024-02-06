@@ -167,20 +167,12 @@ fun LoginScreenBodyContent(
                 )
             },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Correo")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Mail")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Mail")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Post")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "邮件")
+                when (selectedLanguage) {
+                    "Español" -> Text(text = "Correo")
+                    "English" -> Text(text = "Mail")
+                    "Français" -> Text(text = "Mail")
+                    "Deutsch" -> Text(text = "Post")
+                    "中国人" -> Text(text = "邮件")
                 }
             })
         Spacer(modifier = Modifier.height(20.dp))
@@ -193,20 +185,12 @@ fun LoginScreenBodyContent(
                 )
             },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Contraseña")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Password")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Mot de passe")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Passwort")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "密码")
+                when (selectedLanguage) {
+                    "Español" -> Text(text = "Contraseña")
+                    "English" -> Text(text = "Password")
+                    "Français" -> Text(text = "Mot de passe")
+                    "Deutsch" -> Text(text = "Passwort")
+                    "中国人" -> Text(text = "密码")
                 }
             },
             //Aqui se indica cuando debe ser visible la contraseña y cuando estar en modo puntitos para que no se vea
@@ -315,20 +299,12 @@ fun LoginScreenBodyContent(
                 mostrarAlertDialogNumIntentosSuperado = true
             }
         }) {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Acceder")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "To access")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Accéder")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Zugreifen")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "访问")
+            when (selectedLanguage) {
+                "Español" -> Text(text = "Acceder")
+                "English" -> Text(text = "To access")
+                "Français" -> Text(text = "Accéder")
+                "Deutsch" -> Text(text = "Zugreifen")
+                "中国人" -> Text(text = "访问")
             }
         }
         //Botón para hacer Sign Out a una cuenta ya abierta con anterioridad y se ha quedado abierta
@@ -365,20 +341,12 @@ fun LoginScreenBodyContent(
             }
         }
         ) {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Desconectar")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "Sign Out")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Déconnecter")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Trennen")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "断开")
+            when (selectedLanguage) {
+                "Español" -> Text(text = "Desconectar")
+                "English" -> Text(text = "Sign Out")
+                "Français" -> Text(text = "Déconnecter")
+                "Deutsch" -> Text(text = "Trennen")
+                "中国人" -> Text(text = "断开")
             }
         }
         //Si el signIn es correcto
@@ -412,68 +380,75 @@ fun LoginScreenBodyContent(
         }
         Spacer(modifier = Modifier.height(15.dp))
         //Opción de recuperar la contraseña si se le ha olvidado al usaurio
-        if (selectedLanguage.equals("Español")) {
-            ClickableText(text = AnnotatedString("He olvidado mi contraseña"),
-                onClick = {
-                    navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("English")) {
-            ClickableText(text = AnnotatedString("I forgot my password"),
-                onClick = {
-                    navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("Français")) {
-            ClickableText(text = AnnotatedString("J'ai oublié mon mot de passe"),
-                onClick = {
-                    navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("Deutsch")) {
-            ClickableText(text = AnnotatedString("Ich habe mein Passwort vergessen"),
-                onClick = {
-                    navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("中国人")) {
-            ClickableText(text = AnnotatedString("我忘记了我的密码"),
-                onClick = {
-                    navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
-                })
-        }
+        when (selectedLanguage) {
+            "Español" -> {
+                ClickableText(text = AnnotatedString("He olvidado mi contraseña"),
+                    onClick = {
+                        navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
+                    })
+            }
 
+            "English" -> {
+                ClickableText(text = AnnotatedString("I forgot my password"),
+                    onClick = {
+                        navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
+                    })
+            }
+
+            "Français" -> {
+                ClickableText(text = AnnotatedString("J'ai oublié mon mot de passe"),
+                    onClick = {
+                        navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
+                    })
+            }
+
+            "Deutsch" -> {
+                ClickableText(text = AnnotatedString("Ich habe mein Passwort vergessen"),
+                    onClick = {
+                        navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
+                    })
+            }
+
+            "中国人" -> {
+                ClickableText(text = AnnotatedString("我忘记了我的密码"),
+                    onClick = {
+                        navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
+                    })
+            }
+        }
         Spacer(modifier = Modifier.height(15.dp))
         //Opción de crear una nueva cuenta si el usuario no tiene ninguna
-        if (selectedLanguage.equals("Español")) {
-            ClickableText(text = AnnotatedString("Registrarse"),
-                onClick = {
-                    navController.navigate(AppScreens.RegisterScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("English")) {
-            ClickableText(text = AnnotatedString("Check in"),
-                onClick = {
-                    navController.navigate(AppScreens.RegisterScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("Français")) {
-            ClickableText(text = AnnotatedString("Enregistrement"),
-                onClick = {
-                    navController.navigate(AppScreens.RegisterScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("Deutsch")) {
-            ClickableText(text = AnnotatedString("Einchecken"),
-                onClick = {
-                    navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
-                })
-        }
-        if (selectedLanguage.equals("中国人")) {
-            ClickableText(text = AnnotatedString("报到"),
-                onClick = {
-                    navController.navigate(AppScreens.RegisterScreen.route)
-                })
+        when (selectedLanguage) {
+            "Español" -> {
+                ClickableText(text = AnnotatedString("Registrarse"),
+                    onClick = {
+                        navController.navigate(AppScreens.RegisterScreen.route)
+                    })
+            }
+            "English" -> {
+                ClickableText(text = AnnotatedString("Check in"),
+                    onClick = {
+                        navController.navigate(AppScreens.RegisterScreen.route)
+                    })
+            }
+            "Français" -> {
+                ClickableText(text = AnnotatedString("Enregistrement"),
+                    onClick = {
+                        navController.navigate(AppScreens.RegisterScreen.route)
+                    })
+            }
+            "Deutsch" -> {
+                ClickableText(text = AnnotatedString("Einchecken"),
+                    onClick = {
+                        navController.navigate(AppScreens.ContrasenaOlvidadaScreen.route)
+                    })
+            }
+            "中国人" -> {
+                ClickableText(text = AnnotatedString("报到"),
+                    onClick = {
+                        navController.navigate(AppScreens.RegisterScreen.route)
+                    })
+            }
         }
     }
 }

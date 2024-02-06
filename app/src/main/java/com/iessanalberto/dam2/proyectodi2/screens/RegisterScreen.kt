@@ -156,20 +156,12 @@ fun RegisterScreenBodyContent(
                 registerUiState.registroConfPasw
             )
         }, label = {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Correo")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "Mail")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Mail")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Post")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "邮件")
+            when (selectedLanguage){
+                "Español" -> Text(text = "Correo")
+                "English" -> Text(text = "Mail")
+                "Français" -> Text(text = "Mail")
+                "Deutsch" -> Text(text = "Post")
+                "中国人" -> Text(text = "邮件")
             }
         })
         Spacer(modifier = Modifier.height(50.dp))
@@ -182,20 +174,12 @@ fun RegisterScreenBodyContent(
                 registerUiState.registroConfPasw
             )
         }, label = {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Confirmar correo")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "Mail confirmation")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Confirmation de l'émail")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Post bestätigen")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "邮件确认")
+            when (selectedLanguage){
+                "Español" -> Text(text = "Confirmar correo")
+                "English" -> Text(text = "Mail confirmation")
+                "Français" -> Text(text = "Confirmation de l'émail")
+                "Deutsch" -> Text(text = "Post bestätigen")
+                "中国人" -> Text(text = "邮件确认")
             }
         })
         Spacer(modifier = Modifier.height(50.dp))
@@ -210,20 +194,12 @@ fun RegisterScreenBodyContent(
                 )
             },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Contraseña")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Password")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Mot de passe")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Passwort")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "密码")
+                when (selectedLanguage){
+                    "Español" -> Text(text = "Contraseña")
+                    "English" -> Text(text = "Password")
+                    "Français" -> Text(text = "Mot de passe")
+                    "Deutsch" -> Text(text = "Passwort")
+                    "中国人" -> Text(text = "密码")
                 }
             },
             visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
@@ -248,20 +224,12 @@ fun RegisterScreenBodyContent(
                 )
             },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Confirmar contraseña")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Confirm Password")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Confirmer mot de passe")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Bestätigen Sie Ihr Passwort")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "确认密码")
+                when (selectedLanguage) {
+                    "Español" -> Text(text = "Confirmar contraseña")
+                    "English" -> Text(text = "Confirm Password")
+                    "Français" -> Text(text = "Confirmer mot de passe")
+                    "Deutsch" -> Text(text = "Bestätigen Sie Ihr Passwort")
+                    "中国人" -> Text(text = "确认密码")
                 }
             },
             visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
@@ -341,20 +309,12 @@ fun RegisterScreenBodyContent(
                     { error -> Log.e("AuthQuickStart", "Sign up failed", error) })
             }
         }) {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Registratse")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "Check in")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Enregistrement")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Einchecken")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "报到")
+            when (selectedLanguage){
+                "Español" -> Text(text = "Registrarse")
+                "English" -> Text(text = "Check in")
+                "Français" -> Text(text = "Enregistrement")
+                "Deutsch" -> Text(text = "Einchecken")
+                "中国人" -> Text(text = "报到")
             }
         }
         //Si el registro es correcto

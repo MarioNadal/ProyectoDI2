@@ -1,4 +1,4 @@
-package com.iessanalberto.dam2.proyectodi.screens
+package com.iessanalberto.dam2.proyectodi2.screens
 
 import android.util.Log
 import android.widget.Toast
@@ -15,10 +15,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
-import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,9 +24,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -37,7 +33,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -51,8 +46,6 @@ import com.example.loginfactoriaproyectos.navigation.AppScreens
 import com.iessanalberto.dam2.proyectodi.R
 import com.iessanalberto.dam2.proyectodi.viewmodels.ConfirmacionCambioContrasenaScreenViewModel
 import com.iessanalberto.dam2.proyectodi.viewmodels.ContrasenaOlvidadaScreenViewModel
-import com.iessanalberto.dam2.proyectodi.viewmodels.ContrasenaOlvidadaUiState
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -165,20 +158,12 @@ fun ContrasenaOlvidadaScreenBodyContent(
                 )
             },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Correo")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Mail")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Mail")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Post")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "邮件")
+                when(selectedLanguage){
+                    "Español" -> Text(text = "Correo")
+                    "English" -> Text(text = "Mail")
+                    "Français" -> Text(text = "Mail")
+                    "Deutsch" -> Text(text = "Post")
+                    "中国人" -> Text(text = "邮件")
                 }
             })
         Spacer(modifier = Modifier.height(40.dp))
@@ -208,20 +193,12 @@ fun ContrasenaOlvidadaScreenBodyContent(
                 )
             }
         }) {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Obtener código")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "Get code")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Obtenir le code")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Code erhalten")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "获取代码")
+            when (selectedLanguage){
+                "Español" -> Text( text = "Obtener código")
+                "English" -> Text(text = "Get code")
+                "Français" -> Text(text = "Obtenir le code")
+                "Deutsch" -> Text(text = "Code erhalten")
+                "中国人" -> Text(text = "获取代码")
             }
         }
         if (navigationCambiarContrasena.value) {
@@ -260,20 +237,12 @@ fun ContrasenaOlvidadaScreenBodyContent(
                 }
             },
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Nueva contraseña")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "New password")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Nouveau mot de passe")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Neues Kennwort")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "新密码")
+                when (selectedLanguage){
+                    "Español" -> Text(text = "Nueva contraseña")
+                    "English" -> Text(text = "New Password")
+                    "Français" -> Text(text = "Nouveau mot de passe")
+                    "Deutsch" -> Text(text = "Neues Kennwort")
+                    "中国人" -> Text(text = "新密码")
                 }
             })
         Spacer(modifier = Modifier.height(20.dp))
@@ -291,20 +260,12 @@ fun ContrasenaOlvidadaScreenBodyContent(
                 keyboardType = KeyboardType.Number
             ),
             label = {
-                if (selectedLanguage.equals("Español")) {
-                    Text(text = "Código de verificación")
-                }
-                if (selectedLanguage.equals("English")) {
-                    Text(text = "Verification code")
-                }
-                if (selectedLanguage.equals("Français")) {
-                    Text(text = "Le code de vérification")
-                }
-                if(selectedLanguage.equals("Deutsch")){
-                    Text(text = "Bestätigungscode")
-                }
-                if (selectedLanguage.equals("中国人")) {
-                    Text(text = "验证码")
+                when (selectedLanguage){
+                    "Español" -> Text(text = "Código de verificación")
+                    "English" -> Text(text = "Verification Code")
+                    "Français" -> Text(text = "Le code de vérification")
+                    "Deutsch" -> Text(text = "Bestätigungscode")
+                    "中国人" -> Text(text = "验证码")
                 }
             })
         Spacer(modifier = Modifier.height(40.dp))
@@ -358,20 +319,12 @@ fun ContrasenaOlvidadaScreenBodyContent(
                 )
             }
         }) {
-            if (selectedLanguage.equals("Español")) {
-                Text(text = "Acceder")
-            }
-            if (selectedLanguage.equals("English")) {
-                Text(text = "To access")
-            }
-            if (selectedLanguage.equals("Français")) {
-                Text(text = "Accéder")
-            }
-            if(selectedLanguage.equals("Deutsch")){
-                Text(text = "Zugreifen")
-            }
-            if (selectedLanguage.equals("中国人")) {
-                Text(text = "访问")
+            when (selectedLanguage){
+                "Español" -> Text(text = "Acceder")
+                "English" -> Text(text = "To access")
+                "Français" -> Text(text = "Accéder")
+                "Deutsch" -> Text(text = "Zugreifen")
+                "中国人" -> Text(text = "访问")
             }
         }
         if (navigationHome.value) {

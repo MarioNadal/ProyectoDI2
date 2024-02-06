@@ -6,8 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.iessanalberto.dam2.proyectodi.screens.ContrasenaOlvidadaScreen
-import com.iessanalberto.dam2.proyectodi.screens.HomeScreen
+import com.iessanalberto.dam2.proyectodi2.screens.ContrasenaOlvidadaScreen
+import com.iessanalberto.dam2.proyectodi2.screens.HomeScreen
 import com.iessanalberto.dam2.proyectodi.screens.LoginScreen
 import com.iessanalberto.dam2.proyectodi.screens.MFAScreen
 import com.iessanalberto.dam2.proyectodi.screens.RegisterScreen
@@ -32,12 +32,13 @@ fun AppNavigation(){
             arguments = listOf(navArgument(name = "text") {type= NavType.StringType})
         ){ MFAScreen(navController, mfaScreenViewModel = MFAScreenViewModel(), registerScreenUiState = RegisterScreenUiState(),text = it.arguments?.getString("text")) }
         //Esta es la pantalla del Home donde el usuario podrá ver toda la información sobre la aplicación una vez se haya verificadoweq
-        composable(route = AppScreens.HomeScreen.route) { HomeScreen(navController)}
+        composable(route = AppScreens.HomeScreen.route) { HomeScreen(navController) }
         //Esta es la pantalla de usuario
         composable(route = AppScreens.ContrasenaOlvidadaScreen.route) { ContrasenaOlvidadaScreen(
             navController = navController,
             contrasenaOlvidadaScreenViewModel = ContrasenaOlvidadaScreenViewModel(),
             confirmacionCambioContrasenaScreenViewModel = ConfirmacionCambioContrasenaScreenViewModel()
-        )}
+        )
+        }
     }
 }
