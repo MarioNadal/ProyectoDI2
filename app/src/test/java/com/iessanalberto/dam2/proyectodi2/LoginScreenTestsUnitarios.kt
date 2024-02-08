@@ -1,6 +1,6 @@
 package com.iessanalberto.dam2.proyectodi2
 
-import com.iessanalberto.dam2.proyectodi.viewmodels.LoginScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.LoginScreenViewModel
 import org.junit.Assert
 import org.junit.Test
 

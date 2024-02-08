@@ -1,4 +1,4 @@
-package com.iessanalberto.dam2.proyectodi.viewmodels
+package com.iessanalberto.dam2.proyectodi2.viewmodels
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,4 +1,4 @@
-package com.iessanalberto.dam2.proyectodi.screens
+package com.iessanalberto.dam2.proyectodi2.screens
 
 import android.util.Log
 import android.widget.Toast
@@ -15,10 +15,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
-import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,9 +24,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -37,7 +33,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -49,10 +44,9 @@ import androidx.navigation.NavController
 import com.amplifyframework.auth.AuthUserAttributeKey
 import com.amplifyframework.auth.options.AuthSignUpOptions
 import com.amplifyframework.core.Amplify
-import com.example.loginfactoriaproyectos.navigation.AppScreens
+import com.iessanalberto.dam2.proyectodi2.navigation.AppScreens
 import com.iessanalberto.dam2.proyectodi.R
-import com.iessanalberto.dam2.proyectodi.viewmodels.RegisterScreenViewModel
-import java.util.Locale
+import com.iessanalberto.dam2.proyectodi2.viewmodels.RegisterScreenViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

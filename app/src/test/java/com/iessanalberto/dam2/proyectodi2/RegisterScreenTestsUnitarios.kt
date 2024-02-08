@@ -1,6 +1,6 @@
 package com.iessanalberto.dam2.proyectodi2
 
-import com.iessanalberto.dam2.proyectodi.viewmodels.RegisterScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.RegisterScreenViewModel
 import org.junit.Test
 import org.junit.Assert.*
 

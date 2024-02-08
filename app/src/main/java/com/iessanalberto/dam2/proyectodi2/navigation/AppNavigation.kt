@@ -1,4 +1,4 @@
-package com.example.loginfactoriaproyectos.navigation
+package com.iessanalberto.dam2.proyectodi2.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
@@ -8,15 +8,15 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.iessanalberto.dam2.proyectodi2.screens.ContrasenaOlvidadaScreen
 import com.iessanalberto.dam2.proyectodi2.screens.HomeScreen
-import com.iessanalberto.dam2.proyectodi.screens.LoginScreen
-import com.iessanalberto.dam2.proyectodi.screens.MFAScreen
-import com.iessanalberto.dam2.proyectodi.screens.RegisterScreen
-import com.iessanalberto.dam2.proyectodi.viewmodels.ConfirmacionCambioContrasenaScreenViewModel
-import com.iessanalberto.dam2.proyectodi.viewmodels.ContrasenaOlvidadaScreenViewModel
-import com.iessanalberto.dam2.proyectodi.viewmodels.LoginScreenViewModel
-import com.iessanalberto.dam2.proyectodi.viewmodels.MFAScreenViewModel
-import com.iessanalberto.dam2.proyectodi.viewmodels.RegisterScreenUiState
-import com.iessanalberto.dam2.proyectodi.viewmodels.RegisterScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.screens.LoginScreen
+import com.iessanalberto.dam2.proyectodi2.screens.MFAScreen
+import com.iessanalberto.dam2.proyectodi2.screens.RegisterScreen
+import com.iessanalberto.dam2.proyectodi2.viewmodels.ConfirmacionCambioContrasenaScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.ContrasenaOlvidadaScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.LoginScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.MFAScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.RegisterScreenUiState
+import com.iessanalberto.dam2.proyectodi2.viewmodels.RegisterScreenViewModel
 
 @Composable
 fun AppNavigation(){

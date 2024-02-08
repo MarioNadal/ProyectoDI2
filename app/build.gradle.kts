@@ -69,6 +69,9 @@ dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
     implementation("com.amplifyframework:core:2.14.9")
     implementation("com.amplifyframework:aws-auth-cognito:2.14.9")
+    //API
+    implementation("com.amplifyframework:aws-api:2.14.6")
+    implementation("com.amazonaws:aws-android-sdk-apigateway-core:2.3.2")
     //Tests
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

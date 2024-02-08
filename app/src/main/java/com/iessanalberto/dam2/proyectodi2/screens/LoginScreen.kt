@@ -1,6 +1,5 @@
-package com.iessanalberto.dam2.proyectodi.screens
+package com.iessanalberto.dam2.proyectodi2.screens
 
-import android.content.res.Configuration
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -48,10 +47,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.amplifyframework.auth.cognito.result.AWSCognitoAuthSignOutResult
 import com.amplifyframework.core.Amplify
-import com.example.loginfactoriaproyectos.navigation.AppScreens
+import com.iessanalberto.dam2.proyectodi2.navigation.AppScreens
 import com.iessanalberto.dam2.proyectodi.R
-import com.iessanalberto.dam2.proyectodi.viewmodels.LoginScreenViewModel
-import java.util.Locale
+import com.iessanalberto.dam2.proyectodi2.viewmodels.LoginScreenViewModel
 
 @Composable
 fun LoginScreen(navController: NavController, loginScreenViewModel: LoginScreenViewModel) {

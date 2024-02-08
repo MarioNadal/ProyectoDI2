@@ -20,7 +20,8 @@
         "lambdaProyectoDI2": {
           "deploymentBucketName": "amplify-proyectodi2-dev-130949-deployment",
           "s3Key": "amplify-builds/lambdaProyectoDI2-626536776e5331636f59-build.zip"
-        }
+        },
+        "lambaproyectodi2": {}
       },
       "api": {
         "apiProyectoDI2": {}

@@ -42,10 +42,10 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.amplifyframework.core.Amplify
-import com.example.loginfactoriaproyectos.navigation.AppScreens
+import com.iessanalberto.dam2.proyectodi2.navigation.AppScreens
 import com.iessanalberto.dam2.proyectodi.R
-import com.iessanalberto.dam2.proyectodi.viewmodels.ConfirmacionCambioContrasenaScreenViewModel
-import com.iessanalberto.dam2.proyectodi.viewmodels.ContrasenaOlvidadaScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.ConfirmacionCambioContrasenaScreenViewModel
+import com.iessanalberto.dam2.proyectodi2.viewmodels.ContrasenaOlvidadaScreenViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
